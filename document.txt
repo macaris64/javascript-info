@@ -1,0 +1,221 @@
+PROGRAMLAMA DİLLERİ DÖNEM ÖDEVİ : JAVASCRIPT
+TARİHÇE :
+	İlk olarak Brendan Eich tarafından geliştirilmiş olup, ilk defa Aralık 1995 tarihinde Netscape Navigator 2.0 ile birlikte piyasaya sürüldü. Geliştirme aşamasında adı Mocha olarak geçmesine rağmen Eylül 1995 tarihine kadar resmi olarak LiveScript olarak isimlendiriliyordu. Netscape 2.0 Beta3 ile birlikte ismi JavaScript olarak değiştirildi.
+	JavaScript'in isim değişikliği ile Netscape'in Java teknolojilerine (Java Applet) destek vermesi yaklaşık olarak aynı tarihlere denk gelir. Microsoft ile Netscape'in web teknolojileri ve platformları alanında yarıştığı bir dönemde, Netscape Sun Microsystems’ın geliştirdiği Java platformuna destek vererek dağıtık bir işletim sistemi yaratmayı öngörüyordu. JavaScript ise, Visual Basic'in yaptığı gibi, profesyonel olmayan programcıları hedefleyen daha basit bir betik dili olarak düşünülmekteydi.
+	1996 yılının kasım ayında Netscape firması JavaScript'in endüstri standardı olarak belirlenmesi amacıyla Ecma International firmasına başvuruda bulunduğunu ilan etti. Bunun sonucunda standardize edilen sürüm ECMAScript olarak isimlendirildi ve 1997 yılının haziran ayında Ecma International, ECMA-262 belirtiminin ilk sürümünü yayımladı. Haziran 1998'de ISO/IEC-16262 standardına uyumlu hale getirilecek değişiklikler yapılarak ikinci sürüm, Aralık 1999'da ise üçüncü sürüm yayımlandı.
+	ECMAScript'in dördüncü sürümü üzerinde ciddi bir çalışma yapılmasına rağmen asla tamamlanamadı, ancak beşinci sürüm için önemli bir ilham kaynağı oldu. Beşinci sürüm 2009 yılının aralık ayında yayımlandı. ECMAScript'in şu an geçerli olan son standart belirtimi, Haziran 2011 tarihinde yayımlanan 5.1 sürümüdür ve Javascript 1.8.5 tarafından desteklenmektedir.
+TASARIM AMAÇLARI :
+1-JavaScript hızlı olacak şekilde tasarlanmıştır.
+2-JavaScript her zaman çalışacak şekilde tasarlanmıştır.
+HEDEF KİTLESİ :
+	JavaScript genellikle web geliştiricileri için tasarlanmıştır. Fakat son zamanlarda bir çok alanda kullanılmaya başlanmıştır. (Oyun , Yapay Zeka , Makine Öğrenmesi …)
+KULLANIM ALANLARI :
+1- Web Teknolojileri
+2- Web Uygulamaları
+3- Mobil Uygulamaları
+4- Oyunlar
+5- Yapay Zeka
+6- Makine Öğrenmesi
+DESTEKLEDİĞİ PARADİGMALAR :
+Multiparadigmalı bir programlama dilidir.
+1- Imperative
+2- Functional
+3- Object Oriented
+	JavaScript , basit şekilde yorumlanmış ve birinci sınıf fonksiyonlar ile harmanlanmış nesne tabanlı bir programlama dilidir. Prototip tabanlı olması ve çoklu paradigma içeren bir dil olması dinamik ve fonksiyonel bir yapı sağlar. 
+BELLEK YÖNETİMİ :
+1- HAFIZA YAŞAM DÖNGÜSÜ (Memory Life Circle)
+   - Programlama dilinden bağımsız olarak, bellek yaşam döngüsü hemen hemen her zaman aynıdır: 
+1- İhtiyacı olan belleği ayırın.
+2- Tahsil edilen belleği kullanın (oku,yaz)
+3- Artık gerekli olmadığında ayrılmış belleği serbest bırakın
+
+•	JAVASCRIPT’TE BELLEĞİ DAĞITMA
+•	Değer Sıfırlama
+•	Programcıyı rahatsız etmemek için , JavaScript bunu beyan eden değerlerle birlikte yapar.
+•	Fonksiyon Çağrılar Üzerinden Tahsis
+•	Bazı işlev çağrıları , nesne tahsisine yol açar.
+•	Bazı yöntemler , yeni değerler veya nesneler tahsis eder.
+•	Değerleri Kullanma
+•	Değerlerin kullanılması temel olarak tahsis edilmiş bellekte okuma ve yazma anlamına gelir. Bu , bir değişken veya bir nesne özelliğinin değerini okumak veya yazmak veya bir argümanı bir işleve ileterek yapılabilir.
+•	Bellek Artık Gerekli Olmadığında Bırakın
+•		Çoğu bellek yönetimi sorunları bu aşamada gelir. Buradaki en zor görev, "ayrılan belleğe artık gerek duyulmadığında" bulmaktır. Çoğu zaman programcının, bu tür bir bellek parçasının artık gerekli olmadığı ve serbest kaldığı programı belirlemesi gerekir.
+2- GARBAGE COLLECTION (Çöp Toplayıcı)
+•	Yüksek seviyeli diller, işi bellek tahsisini izlemek ve tahsis edilmiş bir belleğin artık ne zaman gerekli olmadığını bulmak için kullanmak üzere "çöp toplayıcı" olarak adlandırılan bir yazılım parçasını yerleştirdi ve bu durumda otomatik olarak serbest kalacak. Bu süreç, bir bellek parçasının gerekip gerekmediğini bilmenin genel problemi olduğu için bir yaklaşımdır (bir algoritma ile çözülemez). 
+•	Yukarıda belirtildiği gibi, bir hafızanın "artık gerekli olmadığı" nın otomatik olarak bulunmasının genel problemi kararsızdır. Sonuç olarak, çöp koleksiyonları genel sorun için bir çözüm kısıtlaması uygular.
+•	DEĞİŞKEN KAPSAMLARI :
+•	LEXICAL SCOPE 
+•	Bir dil statik kapsamı kullanır , eğer sadece kaynak koduna bakarak bir bağın hangi ortamda çözüldüğünü belirleyebilir.
+•	Teknik olarak statik kapsam kapanma kavramı ile uygulanır . Ve tam tersi, kapaklar doğal olarak statik kapsamı olan dillerde uygulanabilir. 
+•	Kapanışların başka uygulamaları da olabilir: ör. Serbest değişkenler , bir uygulama detayı olmasına rağmen bir Closure-sınıf örneğinin özel özellikleri olarak ele alındığında ve teorik konseptle, sözel ortamın “yakalanması” durumundadır.
+const  x  =  10 ;	
+	
+	print_x function () {
+	Console . log (x);
+	}
+	
+	Function  çalıştır () {
+	const  x  =  20 ;
+	print_x ();
+	}
+	
+	run ();
+
+•	DYNAMIC SCOPE 
+
+function produce() {	
+	console.log(this.x);
+	}
+	
+	const alpha = {produce, x: 1};
+	const beta  = {produce, x: 2};
+	const gamma = {produce, x: 3};
+	
+	console.log(
+	alpha.produce(), // 1
+	beta.produce(),  // 2
+	gamma.produce(), // 3
+	);
+TİP SİSTEMİ VE TİP KONTROLÜ:
+•	JAVASCRIPT Türleri 
+•	undefined
+•	null
+•	boolean
+•	string
+•	number
+•	object
+•	Statik vs Dinamik 
+•	Dil semantiği ve tip sistemleri bağlamında, “statik” genellikle “derleme zamanında” veya “program çalıştırmadan”, “dinamik” ise “çalışma zamanında” anlamına gelir.
+
+ÖRNEKLER
+•	Hello World
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+<p><button onclick=“myFunction()">Hello World</button></p>
+<script>
+function myFunction()
+{
+alert(“Hello World!”)
+}
+</script>
+</body>
+</html>
+•	Fibonacci Sayısı Hesaplama
+function fibonacci(num) {
+	var a=1 , b=0 , temp;
+	while(num>=0) {
+		temp=a;
+		a=a+b;
+		b=temp;
+		num—;
+			}
+	return b;
+}
+•	Mükemmel Sayı Hesaplama
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+        <form name="toplam">
+            <label>Sayı : </label>
+            <input type="text" id="txtSayi"><br><br>
+            <input type="button" id="btnHesap" value="HESAPLA"><br><br>
+            <label id="lblSonuc"></label>
+        </form>             
+<script>
+    var btn=document.getElementById("btnHesap");
+    btn.onclick=function(){
+        var i,j;
+        var toplam=0;
+        var sayi=Number(document.getElementById("txtSayi").value);
+        for(i=1;i<sayi;i++)
+         {
+             if (sayi%i==0)
+             {
+                toplam=toplam+i;	
+             }
+         }
+             if (sayi==toplam)
+             {
+                
+                document.getElementById("lblSonuc").innerHTML=sayi + " Sayısı Mükemmel Sayıdır";	 
+             }
+             else
+             {
+                document.getElementById("lblSonuc").innerHTML=sayi + " Sayısı Mükemmel Sayı Değildir";
+             }
+         }
+</script>
+</body>
+</html>
+
+
+
+
+•	Asal Sayı Hesaplama
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+Bitiş Sayı : <input type="text" id="sayi1" />
+<br />
+<input type="button" value="Hesapla" onclick="asalHesapla()" />
+<br />
+<p id="demo"></p>
+<script language="javascript" type="text/javascript">
+var text="";
+var sayi=0;
+ function asalHesapla(){
+var sayac=0;
+sayi=document.getElementById('sayi1').value;
+for(i=2; i<sayi; i++)
+ {
+	if(sayi%i==0)
+	{
+	sayac++;
+	}
+ }
+	if(sayac==0)
+	{
+	text="Asal";
+	}
+	else
+	{
+	text="Asal değil.<br/> 1 ve Kendisi hariç <strong>"+sayac+"</strong> adet böleni var";
+	}
+ document.getElementById('demo').innerHTML = text;
+ }
+</script>
+</body>
+</html>
+•	Sezar Şifreleme
+var encrypt = function(plaintext, shiftAmount) {
+    var ciphertext = "";
+    for(var i = 0; i < plaintext.length; i++) {
+        var plainCharacter = plaintext.charCodeAt(i);
+        if(plainCharacter >= 97 && plainCharacter <= 122) {
+            ciphertext += String.fromCharCode((plainCharacter - 97 + shiftAmount) % 26 + 97);
+        } else if(plainCharacter >= 65 && plainCharacter <= 90) {
+            ciphertext += String.fromCharCode((plainCharacter - 65 + shiftAmount) % 26 + 65);
+        } else {
+            ciphertext += String.fromCharCode(plainCharacter);
+        }
+    }
+    return ciphertext;
+}
+var decrypt = function(ciphertext, shiftAmount) {
+    var plaintext = "";
+    for(var i = 0; i < ciphertext.length; i++) {
+        var cipherCharacter = ciphertext.charCodeAt(i);
+        if(cipherCharacter >= 97 && cipherCharacter <= 122) {
+            plaintext += String.fromCharCode((cipherCharacter - 97 - shiftAmount + 26) % 26 + 97);
+        } else if(cipherCharacter >= 65 && cipherCharacter <= 90) {
+            plaintext += String.fromCharCode((cipherCharacter - 65 - shiftAmount + 26) % 26 + 65);
+        } else {
+            plaintext += String.fromCharCode(cipherCharacter);
+        }
+    }
+    return plaintext;
+}
